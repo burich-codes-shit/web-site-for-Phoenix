@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+<h1>list</h1>
+
+<ul>
+    {% for model in models %}
+    <li>
+        {{ model.name }}<br>
+        <img src="{{ model.image.url }}" alt="" width="150" height="100"><br>
+        {{ model.description }}
+    </li>
+    <br><br>
+
+    {% endfor %}
+</ul>
+
+{% endblock content %}
